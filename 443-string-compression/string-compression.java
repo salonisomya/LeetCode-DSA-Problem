@@ -15,7 +15,7 @@ class Solution {
             }
             count =1;
         }
-        System.out.println(str);
+       // System.out.println(str);
         char[] arr = str.toCharArray();
         for(int i=0;i<str.length();i++){
             chars[i] = arr[i];
