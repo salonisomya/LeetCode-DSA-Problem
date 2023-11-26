@@ -1,17 +1,26 @@
 class Solution {
-    public int largestSubmatrix(int[][] matrix) {
-        for(int i=1;i<matrix.length;i++){
-            for(int j=0;j<matrix[0].length;j++){
-                if(matrix[i][j]==1) matrix[i][j] = matrix[i-1][j] + 1;
+
+    public int largestSubmatrix(int[][] arr) {
+        
+        int n = arr.length;
+        int m = arr[0].length;
+
+        for(int i=1; i<n; i++){
+            for(int j=0; j<m; j++){
+                if(arr[i][j]==1){
+                    arr[i][j] = arr[i-1][j]+1;
+                }
             }
         }
-        int maxi =0;
-        for(int i=0;i<matrix.length;i++){
-            Arrays.sort(matrix[i]);
-            for(int j=1;j<=matrix[0].length;j++){
-                maxi = Math.max(maxi, j*matrix[i][matrix[0].length-j]);
+
+        int ans = 0;
+
+        for(int i=0; i<n; i++){
+            Arrays.sort(arr[i]);
+            for(int j=1; j<=m; j++){
+                ans = Math.max(ans,j*arr[i][m-j]);
             }
         }
-        return maxi;
+        return ans;
     }
 }
