@@ -16,3 +16,7 @@ class Solution {
         return res;
     }
 }
+
+/* cyclic hai toh % n krenge 
+arr[i]==arr[(i+k)%n]
+or agar 1 array mai sare element ko kisi 1 element k equal krna hota hai in min operation mai toh -- mid element k equal kr dete hai-- uske liye Math.abs(val-list.get(list.size()/2)); use krenge */
