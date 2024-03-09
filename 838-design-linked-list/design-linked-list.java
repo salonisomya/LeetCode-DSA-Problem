@@ -82,28 +82,25 @@ class MyLinkedList {
 
     }
     
-     public void deleteAtIndex(int index) {
-        if (index < 0 || index >= size) {
-            return;
-        }
-        if (index == 0) {
+    public void deleteAtIndex(int index) {
+        if(index <0 || index>=size) return;
+        if(index == 0){
             head = head.next;
-            if (head == null) {
-                tail = null;
-            }
-        } else {
-            Node prev = null;
-            Node curr = head;
-            for (int i = 0; i < index; i++) {
-                prev = curr;
-                curr = curr.next;
-            }
-            prev.next = curr.next;
-            if (curr == tail) {
-                tail = prev;
-            }
+            if(head == null ) tail = null;
+            
         }
+     else{   Node prev = null;
+        Node curr = head;
+        for(int i=0;i<index;i++){
+            prev = curr;
+            curr = curr.next;
+        }
+        prev.next = curr.next;
+        if(curr ==tail)
+            tail = prev;
+     }
         size--;
+        
     }
 }
 
