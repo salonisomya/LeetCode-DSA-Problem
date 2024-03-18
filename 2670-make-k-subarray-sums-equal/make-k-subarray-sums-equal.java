@@ -10,7 +10,6 @@ class Solution {
             }
             
              Collections.sort(list);
-             System.out.println(list);
              for(int val : list){
                 steps = steps + Math.abs(val - list.get(list.size()/2));
              }
