@@ -18,13 +18,12 @@ class Solution {
             len++;
         }
         if(len == n){
-            head = head.next;
-            return head;
+            return head.next;
         }
         int x = len-n;
         temp = head;
-        int z = 0;
-        while(z!=x-1){
+        int z = 1;
+        while(z!=x){
             temp = temp.next;
             z++;
         }
