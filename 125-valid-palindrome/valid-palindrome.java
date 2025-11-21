@@ -12,7 +12,7 @@ class Solution {
                 r--;
                 continue;
             }
-            if(Character.toLowerCase(s.charAt(l))!=Character.toLowerCase(s.charAt(r))){
+            if(Character.toLowerCase(s.charAt(l)) != Character.toLowerCase(s.charAt(r))){
                 return false;
             }
             l++;
