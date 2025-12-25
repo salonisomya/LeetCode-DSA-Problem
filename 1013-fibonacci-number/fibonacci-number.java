@@ -1,15 +1,15 @@
 class Solution {
     public int fib(int n) {
-        int i =2, sum =0, fsum = 0, lsum = 1;
-        if(n<=1)
+        if(n<=1){
             return n;
+        }
+        int sum =0 , fs = 0, ls=1, i=2;
         while(n>=i){
-            sum = fsum +lsum;
-            fsum = lsum;
-            lsum = sum;
+            sum = ls+fs;
+            fs = ls;
+            ls = sum;
             n--;
         }
         return sum;
-
     }
 }
