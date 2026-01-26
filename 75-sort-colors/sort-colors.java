@@ -11,11 +11,11 @@ class Solution {
         for(int i=0;i<one;i++){
             nums[idx++]=0;
         }
-        for(int i=0;i<two;i++){
-            nums[idx++]=1;
+        for(int i=one;i<two+one;i++){
+            nums[i]=1;
         }
-        for(int i=0;i<three;i++){
-            nums[idx++]=2;
+        for(int i=two+one;i<n;i++){
+            nums[i]=2;
         }
     }
 }
