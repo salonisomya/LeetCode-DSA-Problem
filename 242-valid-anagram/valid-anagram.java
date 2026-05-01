@@ -9,8 +9,8 @@ class Solution {
             count[s.charAt(i) -'a']++;
             count[t.charAt(i) -'a']--;
         }
-        for(int i=0;i<26;i++){
-            if(count[i]!=0) return false;
+        for(int c : count){
+            if(c!=0) return false;
         }
         return true;
     }
