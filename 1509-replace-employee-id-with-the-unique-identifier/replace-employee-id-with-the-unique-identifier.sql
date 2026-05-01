@@ -1,4 +1,4 @@
 # Write your MySQL query statement below
 SELECT u.unique_id, e.name
-FROM EmployeeUNI u RIGHT JOIN Employees e ON 
+FROM Employees e  LEFT JOIN  EmployeeUNI u ON 
 u.id = e.id;
