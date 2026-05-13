@@ -8,13 +8,12 @@ class Solution {
             if(sum == val){
                 return new int[]{s+1,l+1};
             }
-            System.out.println("sum -- "+sum);
-            if (sum > val)
+            else if (sum > val)
             l--;
             else s++;
             
         }
-        return new int[]{};
+        return null;
         
     }
 }
