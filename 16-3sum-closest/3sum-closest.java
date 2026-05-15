@@ -9,7 +9,7 @@ class Solution {
             while(l<k){
                 int sum = nums[i]+nums[l]+nums[k];
                 if(sum == target) return sum;
-                else if(Math.abs(sum - target) < Math.abs(curr - target)){
+                if(Math.abs(sum - target) < Math.abs(curr - target)){
                     curr = sum;
                 }
                 if(sum < target ) l++;
