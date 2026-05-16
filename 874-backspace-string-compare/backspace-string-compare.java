@@ -1,5 +1,3 @@
-//brute force
-
 class Solution {
     public boolean backspaceCompare(String s, String t) {
         return build(s).equals(build(t));
@@ -8,16 +6,14 @@ class Solution {
     private String build(String str) {
         StringBuilder sb = new StringBuilder();
 
-        int n = str.length();
-        for(int i = 0;i<n;i++){
-            char ch = str.charAt(i);
-            if(ch != '#'){
-                sb.append(ch);
-            }
-            else if(sb.length()>0){
+        for(char c : str.toCharArray()) {
+            if(c != '#') {
+                sb.append(c);
+            } else if(sb.length() > 0) {
                 sb.deleteCharAt(sb.length() - 1);
             }
         }
+
         return sb.toString();
     }
 }
