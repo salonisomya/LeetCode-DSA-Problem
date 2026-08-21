@@ -22,9 +22,10 @@ class Solution {
         while(!q.isEmpty()){
             List<Integer> list = new ArrayList<>();
             int n = q.size();
+            long sum =0;
             for(int i =0;i<n;i++){
                 TreeNode node = q.remove();
-                list.add(node.val);
+                sum = sum + node.val;
                 if(node.left!=null){
                     q.add(node.left);
                 }
@@ -32,10 +33,7 @@ class Solution {
                     q.add(node.right);
                 }
             }
-            long sum =0;
-            for(int l : list){
-                sum = sum + l;
-            }
+            
             double val = (double)sum/n;
             ans.add(val);
             
