@@ -32,9 +32,7 @@ class Solution {
                     q.add(node.right);
                 }
             }
-            
-            double val = (double)sum/n;
-            ans.add(val);
+            ans.add((double)sum/n);
             
         }
         return ans;
