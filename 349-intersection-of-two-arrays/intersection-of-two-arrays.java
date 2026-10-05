@@ -3,18 +3,27 @@ class Solution {
         Set<Integer> set1 = new HashSet<>();
         Set<Integer> set2 = new HashSet<>();
 
-        for(int i=0;i<nums1.length;i++){
-            set1.add(nums1[i]);
+        for(int n : nums1){
+            set1.add(n);
         }
-        for(int i=0;i<nums2.length;i++){
-            if(set1.contains(nums2[i]))
-            set2.add(nums2[i]);
+        for(int n : nums2){
+            set2.add(n);
         }
-        int arr[] = new int[set2.size()];
-        int idx=0;
-        for(int n :set2){
-            arr[idx++] = n;
+
+        List<Integer> list = new ArrayList<>();
+
+        for(int n : set1){
+            if(set1.contains(n) && set2.contains(n)){
+                list.add(n);
+            }
+        }
+        int[] arr = new int[list.size()];
+        int i =0;
+        for(int n : list){
+            arr[i] = n;
+            i++;
         }
         return arr;
+
     }
 }
