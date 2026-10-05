@@ -6,20 +6,16 @@ class Solution {
         for(int n : nums1){
             set1.add(n);
         }
+
         for(int n : nums2){
-            set2.add(n);
-        }
-
-        List<Integer> list = new ArrayList<>();
-
-        for(int n : set1){
-            if(set1.contains(n) && set2.contains(n)){
-                list.add(n);
+            if(set1.contains(n)){
+                set2.add(n);
             }
         }
-        int[] arr = new int[list.size()];
+    
+        int[] arr = new int[set2.size()];
         int i =0;
-        for(int n : list){
+        for(int n : set2){
             arr[i] = n;
             i++;
         }
