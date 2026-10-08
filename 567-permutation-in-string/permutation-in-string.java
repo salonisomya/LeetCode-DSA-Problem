@@ -28,8 +28,8 @@ class Solution {
 
             } 
 
-            if(i-l+1 == n){
-                if(map1.equals(map2)) return true;
+            if(i-l+1 == n && map1.equals(map2)){
+                 return true;
             }
 
         }
