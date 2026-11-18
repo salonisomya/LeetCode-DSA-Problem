@@ -6,18 +6,14 @@ class Solution {
         int l =0;
         int r =1;
         int maxprofit = 0;
+        int minval = prices[0];
 
-        while(r<n){
-            if(prices[l] <= prices[r]){
-                int profit = prices[r] - prices[l];
-                maxprofit = Math.max(maxprofit,profit);
-                r++;
-            }
-            else{
-                l=r;
-                r++;
-            }
+        for(int i=0;i<n;i++){
+            minval = Math.min(minval,prices[i]);
+            maxprofit = Math.max(maxprofit, prices[i] - minval);
         }
+
+        
 
         return maxprofit;
     }
